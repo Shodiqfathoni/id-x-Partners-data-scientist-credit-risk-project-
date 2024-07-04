@@ -24657,3 +24657,31 @@ Alternately, you can install this by running `pip install pycaret[models]`
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
 2024-07-04 07:07:17,775:INFO:Initializing load_model()
 2024-07-04 07:07:17,775:INFO:load_model(model_name=LGBM, platform=None, authentication=None, verbose=True)
+2024-07-04 07:08:34,241:INFO:Initializing load_model()
+2024-07-04 07:08:34,241:INFO:load_model(model_name=LGBM, platform=None, authentication=None, verbose=True)
+2024-07-04 07:08:34,516:INFO:Initializing predict_model()
+2024-07-04 07:08:34,516:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001E32861BBD0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('label_encoding',
+                 TransformerWrapperWithInverse(transformer=LabelEncoder())),
+                ('date_feature_extractor',
+                 TransformerWrapper(include=['issue_d', 'earliest_cr_line',
+                                             'last_pymnt_d',
+                                             'last_credit_pull_d'],
+                                    transformer=ExtractDateTimeFeatures())),
+                ('numerical_imputer',
+                 TransformerWrapper(include=['loan_amnt', 'funded...
+                                    transformer=OneHotEncoder(cols=['grade',
+                                                                    'emp_length',
+                                                                    'home_ownership',
+                                                                    'verification_status',
+                                                                    'purpose'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('balance',
+                 TransformerWrapper(transformer=FixImbalancer(estimator=SMOTE()))),
+                ('normalize', TransformerWrapper(transformer=MinMaxScaler())),
+                ('trained_model', LGBMClassifier(n_jobs=-1, random_state=652))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001E32A565080>)
+2024-07-04 07:08:34,517:INFO:Checking exceptions
+2024-07-04 07:08:34,517:INFO:Preloading libraries
+2024-07-04 07:08:34,592:INFO:Set up data.
+2024-07-04 07:08:34,817:INFO:Set up index.
